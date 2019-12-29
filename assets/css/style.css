@@ -1,0 +1,8 @@
+body {
+    background-image: url(../images/BACKGROUND.jpg);
+}
+
+.directions {
+    background-color: tan;
+    font-family: monospace;
+}
