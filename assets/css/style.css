@@ -3,8 +3,9 @@ body {
 }
 
 .directions {
-    background-color: tan;
+    background-color: rgba(255, 255, 255, 0.701);
     font-family: monospace;
+    margin: 20px;
 }
 
 img {
@@ -16,10 +17,17 @@ img {
 
 .score {
     background-color: teal;
-    height: 200px;
+    /* height: 200px; */
     float: left;
+    padding:20px;
 }
 
 p {
     padding: 10px;
+}
+
+.yourTotal {
+    float: left;
+    background-color: rgba(143, 254, 243, 0.708);
+    font-family: monospace;
 }
