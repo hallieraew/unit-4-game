@@ -1,6 +1,6 @@
 
-    var wins = 0;
-    var loss = 0;
+    var wins = "";
+    var loss = "";
     var currentScore = 0;
     var crystalNum = "";
     var targetScore = Math.floor(Math.random() * 120) + 19;
@@ -15,10 +15,12 @@
     
     $(document).ready(function () {
     
-        $(".crystal-image").each(function() {
+        $(".crystal-image").each(function setCrystal() {
         crystalArray = Math.floor(Math.random() * 12) + 1;
         $(this).attr("data-value", crystalArray);
         console.log(crystalArray);
+
+        $("#target-score").text(targetScore);
     }
     );
         $(".crystal-image").on("click", function() {
@@ -27,61 +29,33 @@
             crystalVal = parseInt(crystalVal);
             console.log(crystalVal);
 
+            console.log(targetScore);
+
             currentScore += crystalVal;
             $("#current-score").text(currentScore);
+            $("#win-text").text("Wins: " + wins);
+            $("#loss-text").text("Losses: " + loss);
+
 
             if (currentScore === targetScore) {
                 wins++;
-                
+                reset();
+            }
+
+            else if (currentScore > targetScore) {
+                loss++;
+                reset();
+            }
+
+            else {
+
             }
         });
 
-    // $("#purple-crystal").on("click", function () {
-    //     var crystalRandom = Math.floor(Math.random() * 12) + 1;
-    //     crystalRandom = genArray();
-    //     console.log(crystalRandom);
-    // });
-    
-    // $("#blue-crystal").on("click", function () {
-    //     var crystalRandom = Math.floor(Math.random() * 12) + 1;
-    //     crystalRandom = genArray();
-    //     console.log(crystalRandom);
-    // });
-    
-    // $("#white-crystal").on("click", function () {
-    //     var crystalRandom = Math.floor(Math.random() * 12) + 1;
-    //     crystalRandom = genArray();
-    //     console.log(crystalRandom);
-    // });
-    
-    // $("#emerald").on("click", function () {
-    //     var crystalRandom = Math.floor(Math.random() * 12) + 1;
-    //     crystalRandom = genArray();
-    //     console.log(crystalRandom);
-    // });
-    
-//     if (inProgress) {
-//         var targetScore = Math.floor(Math.random() * 120) + 19;
-//         $("#target-score").text(targetScore);
-        
-//         for (i=0; i<genArray.length; i++) {
-//             var crystalVal = $("crystal-image");
-
-//             crystalVal.attr("data-crystalval", genArray[i]);
-
-//             $("#crystal-image").text(crystalVal);
-//         }
-
-//     }
-//     else if (inProgress === false) {
-//         if ($("#purple-crystal").on("click", function() {
-//             $("#current-score").text(targetScore)
-//             }));
-//     }
-// });
-
-
-// if  (inProgress) {
-//     $("#target-score").text(targetScore);
+        function reset() {
+            currentScore = 0;
+            crystalNum = "";
+            targetScore = "";
+        }
 
     });
