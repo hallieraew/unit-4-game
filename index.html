@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>The Crystal Collector</title>
+
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -13,7 +14,7 @@
 
     <div id = "directions">
         <h1>The Crystal Collector</h1>
-        <p class="lead">You will be given a random number at the start of the game. <br><br>
+        <p>You will be given a random number at the start of the game. <br><br>
             There are four crystals below. By clicking on a crystal you will add a specific amount of points to your
             total score. <br><br>
             You win the game by matching your total score to the random number, you lose the game if your total score
@@ -30,15 +31,20 @@
         <p id="loss-text">Losses:</p>
     </div>
     <div>
-        <!-- insert crystal images here -->
+        <img id = "blue-crystal" src="assets/images/blue crystal.jpeg" alt="blue crystal">
+        <img id = "purple-crystal" src = "assets/images/depositphotos_33919881-stock-photo-purple-crystals.jpg" alt="purple crystal">
+        <img id = "white-crystal" src = "assets/images/depositphotos_34310563-stock-photo-lovely-terminated-white-rock-crystal.jpg" alt = "white crystal">
+        <img id = "emerald" src = "assets/images/emerald.jpg" alt= "emerald">
     </div>
+    <br>
     <div>
         <p>Your total score is: </p>
     </div>
-    <div>
+    <div class="score">
         <h1 id = "current-score"></h1>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/game.js"> </script>
 </body>
 <!-- background image

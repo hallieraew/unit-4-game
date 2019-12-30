@@ -6,3 +6,20 @@ body {
     background-color: tan;
     font-family: monospace;
 }
+
+img {
+    float: left;
+    padding: 20px;
+    height: 200px;
+    width: 200px;
+}
+
+.score {
+    background-color: teal;
+    height: 200px;
+    float: left;
+}
+
+p {
+    padding: 10px;
+}
