@@ -18,8 +18,9 @@ img {
 .score {
     background-color: teal;
     /* height: 200px; */
-    float: left;
+    /* float: left; */
     padding:20px;
+    margin: 10px;
 }
 
 p {
