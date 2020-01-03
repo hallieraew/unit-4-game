@@ -5,13 +5,8 @@ var currentScore = 0;
 var crystalNum = "";
 var targetScore = Math.floor(Math.random() * 120) + 19;
 var inProgress = false;
-
 var crystalArray = [];
 
-// function genArray() {
-//     crystalArray.push = Math.floor(Math.random() * 12) + 1; 
-//     console.log(crystalArray);
-// };
 
 $(document).ready(function () {
 
