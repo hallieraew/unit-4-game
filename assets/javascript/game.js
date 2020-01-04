@@ -35,23 +35,18 @@ $(document).ready(function () {
 
         currentScore += crystalVal;
         $("#current-score").text(currentScore);
-        $("#win-text").text("Wins: " + wins);
-        $("#loss-text").text("Losses: " + loss);
-
-
+        
         if (currentScore === targetScore) {
             wins++;
+            $("#win-text").text("Wins: " + wins);
             $("#current-score").text("You Win!");
             reset();
-        }
-
-        else if (currentScore > targetScore) {
+        } else if (currentScore > targetScore) {
             loss++;
+            $("#loss-text").text("Losses: " + loss);
             $("#current-score").text("You Lose!");
             reset();
-        }
-
-        else {
+        } else {
             console.log("keep er rollin");
         }
     });
