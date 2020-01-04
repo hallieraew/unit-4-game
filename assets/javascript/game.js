@@ -14,16 +14,20 @@ $(document).ready(function () {
         crystalArray = Math.floor(Math.random() * 12) + 1;
         $(this).attr("data-value", crystalArray);
         console.log(crystalArray);
-
         $("#target-score").text(targetScore);
-    }
-    );
+    })
+
     function reset() {
         currentScore = 0;
         crystalNum = "";
         targetScore = Math.floor(Math.random() * 120) + 19;
         $("#target-score").text(targetScore);
+        $(".crystal-image").each(function setCrystal() {
+            crystalArray = Math.floor(Math.random() * 12) + 1;
+            $(this).attr("data-value", crystalArray);
+            console.log(crystalArray);})
     }
+
     $(".crystal-image").on("click", function () {
 
         var crystalVal = ($(this).attr("data-value"));
@@ -48,7 +52,4 @@ $(document).ready(function () {
         } else {
             console.log("keep er rollin");
         }
-    });
-
-
-});
+})});
