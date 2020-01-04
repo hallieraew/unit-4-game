@@ -16,7 +16,6 @@ $(document).ready(function () {
         console.log(crystalArray);
 
         $("#target-score").text(targetScore);
-
     }
     );
     function reset() {
